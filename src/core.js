@@ -1,5 +1,7 @@
 import {fromJS, List, Map, Iterable} from 'immutable';
 
+export const INITIAL_STATE = Map();
+
 export function setEntries(state, entries) {
 	return Iterable.isIterable(entries) ? state.set('entries', entries): state.set('entries', fromJS(entries));
 };
